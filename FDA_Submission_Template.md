@@ -140,6 +140,7 @@ As our algorithm is aim for screening studies we decided to focus on **Recall** 
 - The image type to use is `DX` and should only be used with chest images either `AP` or `PA`.
 
 **Ground Truth Acquisition Methodology:**
+
 Since identifying Pneumonia is difficult for radiologists, we will use silver standard as the Ground Truth.
 
 **Algorithm Performance Standard:**
