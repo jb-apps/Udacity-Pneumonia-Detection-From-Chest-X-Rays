@@ -1,5 +1,11 @@
 
 # Pneumonia Detection From Chest X Rays
+Index:
+- [Exploratory data analysis](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/EDA.ipynb)
+- [Build and Training the model](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/Build%20and%20train%20model.ipynb)
+- [Inference](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/Inference.ipynb)
+- [FDA Submission](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/FDA_Submission_Template.md)
+
 This project uses the [NIH Chest X-ray](https://nihcc.app.box.com/v/ChestXray-NIHCC) dataset to assist radiologists in the detection of Pneumonia.
 
 The dataset is highly imbalanced as more than the 50% of studies are from cases with no findings.
