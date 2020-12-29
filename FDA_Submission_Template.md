@@ -24,8 +24,9 @@ For assisting radiologists into detecting Pneumonia on chest X-Rays.
 **Clinical Impact of Performance:**
 
 ### 2. Algorithm Design and Function
-
-<< Insert Algorithm Flowchart >>
+|Algorithm|
+|----|
+|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/Algorithm.png)|
 
 **DICOM Checking Steps:**
 
@@ -56,7 +57,7 @@ Finally we've added a fully-connected layer with one unit using `sigmoid` as the
 	* shear_range = 0.1
 	* zoom_range = 0.1
 * Batch size = 64
-* Optimizer learning rate
+* Optimizer learning rate = 0.0004
 * Layers of pre-existing architecture that were frozen
 ```
 input_1 (InputLayer)         (None, 224, 224, 3)       0         
@@ -145,29 +146,3 @@ Since identifying Pneumonia is difficult for radiologists, we will use silver st
 - Since our algorithm is used for screening studies we will focus on *recall*
 - We want to achieve a high recall, since our algorithm is used for screening studies, in our case we got a 0.8.
 - The F1 score of our algorithm was 0.4, this score is slightly higher to the average of radiologists `0.387`  according to the [CheXNet](https://arxiv.org/pdf/1711.05225.pdf) paper.
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
-
-And this will produce a flow chart:
-
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
