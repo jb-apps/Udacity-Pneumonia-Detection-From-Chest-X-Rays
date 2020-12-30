@@ -73,15 +73,16 @@ Finally we've added a fully-connected layer with one unit using `sigmoid` as the
 
 **Parameters:**
 * Types of augmentation used during training
-	* Rescale
-	* Horizontal flip
-	* Vertical flip
+	* Rescale = 1. / 255.0
+	* Horizontal flip = True
+	* Vertical flip = False
 	* height_shift_range = 0.1
 	* width_shift_range = 0.1
 	* rotation_range = 20
 	* shear_range = 0.1
 	* zoom_range = 0.1
-* Batch size = 64
+* Batch size for training = 64
+* Batch size for validation = 18
 * Optimizer learning rate = 0.0004
 * Layers of pre-existing architecture that were frozen
 ```
