@@ -134,7 +134,7 @@ In clinical situations:
 
 As our algorithm is aim for screening studies we must focus on maximizing **recall** as we want to be more confident when the test is negative. A high recall will mean **False Negatives** will be close to zero.
 
-We've selected a threshold of `0.35` obtaining a recall of `0.8` penalising precision to `0.26`.
+We've selected a threshold of `0.28` obtaining a recall of `0.78` penalising precision to `0.28`.
 
 
 ### 4. Databases
