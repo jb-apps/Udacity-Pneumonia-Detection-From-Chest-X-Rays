@@ -101,11 +101,11 @@ block4_conv1 (Conv2D)        (None, 28, 28, 512)       1180160
 block4_conv2 (Conv2D)        (None, 28, 28, 512)       2359808   
 block4_conv3 (Conv2D)        (None, 28, 28, 512)       2359808   
 block4_pool (MaxPooling2D)   (None, 14, 14, 512)       0        
+block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808
+block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808
 ```
 * Layers of pre-existing architecture that were fine-tuned
 ```
-block5_conv1 (Conv2D)        (None, 14, 14, 512)       2359808
-block5_conv2 (Conv2D)        (None, 14, 14, 512)       2359808
 block5_conv3 (Conv2D)        (None, 14, 14, 512)       2359808   
 block5_pool (MaxPooling2D)   (None, 7, 7, 512)         0
 ```
@@ -117,9 +117,6 @@ Dense(1024, activation = 'relu')
 Dropout(0.2)
 
 Dense(512, activation = 'relu')
-Dropout(0.2)
-    
-Dense(256, activation = 'relu')
 Dropout(0.2)
 
 Dense(1, activation = 'sigmoid')
