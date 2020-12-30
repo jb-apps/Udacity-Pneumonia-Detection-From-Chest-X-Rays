@@ -22,6 +22,10 @@ For assisting radiologists into detecting Pneumonia on chest X-Rays.
 * Runs slowly without a GPU.
 
 **Clinical Impact of Performance:**
+As we are more interested in reducing the number of patients sent home, we have to reduce the False Negatives. Hence, we need to focus on maximizing the recall, and also because our algorithm is designed to help in screening studies. 
+
+False Positives does not have a big impact on a patients, it is okay to send a healthy patient to a new screening.
+
 
 ### 2. Algorithm Design and Function
 |Algorithm|
