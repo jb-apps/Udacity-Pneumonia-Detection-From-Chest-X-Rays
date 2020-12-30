@@ -133,25 +133,27 @@ As our algorithm is aim for screening studies we decided to focus on **Recall** 
 
 ### 4. Databases
 
- (For the below, include visualizations as they are useful and relevant)
-- The training dataset consists of 2290 rows with 27 features each one, we've create a balanced `pneumonia_class` column where 50% correspond to positive pneumonia studies.
-
 **Description of Training Dataset:** 
 
-| Training Dataset | Gender Distribution | Age Distribution |
+- The training dataset consists of 2290 rows with 27 features each one, we've create a balanced `pneumonia_class` column where 50% correspond to positive pneumonia studies and the rest 50% with random selected samples with no pneumonia studies.
+- - The dataset is slightly imbalance between gender, having more male studies than females.
+- The age distribution for both datasets go from 10 to 80.
+
+| Training Dataset distribution | Gender Distribution | Age Distribution |
 |----------|--------|-----|
 |![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_dataset.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_dataset_gender.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_age_distribution.png)|
-|Balanced with 50% pneumonia cases| The gender is slightly imbalanced, with more males than females|The age distribution with more cases between 10 and 80 years.
+|Balanced with 50% pneumonia cases| Slightly imbalanced, with more males than females studies|More cases between 10 and 80 years|
 
 
 **Description of Validation Dataset:** 
-- The validation dataset consist of 1430 images, where 20% of them are from Pneumonia studies.
-- Both datasets are slight imbalance between gender, having more male studies.
+- The validation dataset consist of 1430 rows each one with 27 features, we've create an imbalanced `pneumonia_class` column where 20% correspond to positive pneumonia studies and the rest 80% of random selected samples with no pneumonia studies.
+- The dataset is slightly imbalance between gender, having more male studies than females.
 - The age distribution for both datasets go from 10 to 80.
-| Validation | Gender Distribution | Age Distribution |
+
+| Validation dataset distribution | Gender Distribution | Age Distribution |
 |----------|--------|-----|
 |![](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/validation_dataset.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/validation_gender_distribution.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/validation_age_distribution.png)|
-
+| 20% pneumonia studies | Slightly imbalanced, with more males than females studies | More cases between 10 and 80 years|
 
 ### 5. Ground Truth
 - The NIH Chest X-ray dataset uses NLP to obtain the labels which can lead to not having the real disease.
