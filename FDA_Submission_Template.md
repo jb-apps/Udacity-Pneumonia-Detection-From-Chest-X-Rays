@@ -174,16 +174,16 @@ One patient can have more than one disease similar to Pneumonia and many of them
 ### 6. FDA Validation Plan
 
 **Patient Population Description for FDA Validation Dataset:**
-- The population used for the dataset are men and women with ages between 10 and 80 with no previous history of Pneumonia. 
-- The image type to use is `DX` and should only be used with chest images either `AP` or `PA`.
+Ideally we would like to obtain a dataset with chest images from `DX` studies as the body part examined, also age range, gender distribution, pneumonia, and pneumonia comorbid with other diseases.
+
+This should be a balanced dataset with population of men and women with ages between 10 and 80 with no previous history of Pneumonia. 
 
 
 **Ground Truth Acquisition Methodology:**
 
-Since identifying Pneumonia is difficult for radiologists, we will use silver standard as the Ground Truth.
+Since identifying Pneumonia is difficult for radiologists, we will use silver standard approach as the Ground Truth.
 
 
 **Algorithm Performance Standard:**
-- Since our algorithm is used for screening studies we will focus on *recall*
-- We want to achieve a high recall, since our algorithm is used for screening studies, in our case we got a 0.8.
-- The F1 score of our algorithm was 0.4, this score is slightly higher to the average of radiologists `0.387`  according to the [CheXNet](https://arxiv.org/pdf/1711.05225.pdf) paper.
+Since our algorithm is used for screening studies we will focus on *recall*. We want to achieve a high recall, at least higher than 0.8.
+The F1 score of our algorithm was 0.4, this score is slightly higher to the average of radiologists `0.387`  according to the [CheXNet](https://arxiv.org/pdf/1711.05225.pdf) paper.
