@@ -17,11 +17,14 @@ For assisting radiologists into detecting Pneumonia on chest X-Rays.
 * Use in men and women with ages between 10 and 80.
 * Use with images PA and AP.
 
+
 **Device Limitations:**
 * The classifier is not tested on patients with previous history of Pneumonia.
 * Runs slowly without a GPU.
 
+
 **Clinical Impact of Performance:**
+
 As we are more interested in reducing the number of patients sent home, we have to reduce the False Negatives. Hence, we need to focus on maximizing the recall, and also because our algorithm is designed to help in screening studies. 
 
 False Positives does not have a big impact on a patients, it is okay to send a healthy patient to a new screening.
@@ -43,11 +46,14 @@ If all these conditions are met, then we return:
 - Image mean.
 - Image standard deviation.
 
+
 **Preprocessing Steps:**
 - We first standarize the image using the mean and standard deviation.
 - We resize the image using the image size used for training.
+
     
 **CNN Architecture:**
+
 VGG16 CNN was used for transfer learning. All but the last block were freezed.
 We got better results by fine tuning the last block which has 3 convolutional layers and a MaxPooling2D.
 We've also added 3 fully-connected layers of 1024, 512 and 256 units using `relu` as the activation function,
@@ -64,6 +70,7 @@ Finally we've added a fully-connected layer with one unit using `sigmoid` as the
 * **loss** = 'binary_crossentropy'
 * **optimizer** = 'adam'
 * **metrics** = ['binary_accuracy']
+
 
 ### 3. Algorithm Training
 
@@ -120,25 +127,33 @@ Dropout(0.2)
 Dense(1, activation = 'sigmoid')
 ```
 
+
 **Final Threshold and Explanation:**
+
 As our algorithm is aim for screening studies we decided to focus on **Recall** as a high recall means we are most confident when the test is negative. Hence, we've selected a threshold of `0.35` obtaining a recall of `0.8` penalising precision to `0.26`
 
+
 ### 4. Databases
+
  (For the below, include visualizations as they are useful and relevant)
 - The training dataset consists of 2290 images, where 50% correspond to positive pneumonia studies.
 - The validation dataset consist of 1430 images, where 20% of them are from Pneumonia studies.
 - Both datasets are slight imbalance between gender, having more male studies.
 - The age distribution for both datasets go from 10 to 80.
 
+
 **Description of Training Dataset:** 
+
 | Training | Gender Distribution | Age Distribution |
 |----------|--------|-----|
 |![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_dataset.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_dataset_gender.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_age_distribution.png)|
+
 
 **Description of Validation Dataset:** 
 | Validation | Gender Distribution | Age Distribution |
 |----------|--------|-----|
 |![](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/validation_dataset.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/validation_gender_distribution.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/validation_age_distribution.png)|
+
 
 ### 5. Ground Truth
 - The NIH Chest X-ray dataset uses NLP to obtain the labels which can lead to not having the real disease.
@@ -149,15 +164,18 @@ As our algorithm is aim for screening studies we decided to focus on **Recall** 
 |------------------|------------------|
 |![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/NIH_distribution.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/diseases_comorbid_with_pneumonia.png)|
 
+
 ### 6. FDA Validation Plan
 
 **Patient Population Description for FDA Validation Dataset:**
 - The population used for the dataset are men and women with ages between 10 and 80 with no previous history of Pneumonia. 
 - The image type to use is `DX` and should only be used with chest images either `AP` or `PA`.
 
+
 **Ground Truth Acquisition Methodology:**
 
 Since identifying Pneumonia is difficult for radiologists, we will use silver standard as the Ground Truth.
+
 
 **Algorithm Performance Standard:**
 - Since our algorithm is used for screening studies we will focus on *recall*
