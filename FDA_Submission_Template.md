@@ -136,8 +136,8 @@ As our algorithm is aim for screening studies we decided to focus on **Recall** 
 **Description of Training Dataset:** 
 
 - The training dataset consists of 2290 rows with 27 features each one, we've create a balanced `pneumonia_class` column where 50% correspond to positive pneumonia studies and the rest 50% with random selected samples with no pneumonia studies.
-- - The dataset is slightly imbalance between gender, having more male studies than females.
-- The age distribution for both datasets go from 10 to 80.
+- - The dataset is slightly imbalanced between gender, having more male studies than females.
+- The age distribution goes from 10 to 80 as seen in the below image.
 
 | Training Dataset distribution | Gender Distribution | Age Distribution |
 |----------|--------|-----|
@@ -147,8 +147,8 @@ As our algorithm is aim for screening studies we decided to focus on **Recall** 
 
 **Description of Validation Dataset:** 
 - The validation dataset consist of 1430 rows each one with 27 features, we've create an imbalanced `pneumonia_class` column where 20% correspond to positive pneumonia studies and the rest 80% of random selected samples with no pneumonia studies.
-- The dataset is slightly imbalance between gender, having more male studies than females.
-- The age distribution for both datasets go from 10 to 80.
+- The dataset is slightly imbalanced between gender, having more male studies than females.
+- The age distribution goes from 10 to 80 as seen in the below image.
 
 | Validation dataset distribution | Gender Distribution | Age Distribution |
 |----------|--------|-----|
