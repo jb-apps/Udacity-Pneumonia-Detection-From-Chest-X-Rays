@@ -55,6 +55,12 @@ We've also added a 20% dropout to each layer.
 
 Finally we've added a fully-connected layer with one unit using `sigmoid` as the activation function. The reason behind not returning the `logits` is because we are using `binary_crossentropy` as the loss function and according to the [documentation](https://keras.io/api/losses/probabilistic_losses/#binary_crossentropy-function) by default it doesn't expect logits.
 
+![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download.png)
+
+|Precision-Recall|AUC|
+|------|------|
+|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download-2.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download-1.png)|
+
 * **loss** = 'binary_crossentropy'
 * **optimizer** = 'adam'
 * **metrics** = ['binary_accuracy']
@@ -113,11 +119,6 @@ Dropout(0.2)
 
 Dense(1, activation = 'sigmoid')
 ```
-![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download.png)
-
-|Precision-Recall|AUC|
-|------|------|
-|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download-2.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download-1.png)|
 
 **Final Threshold and Explanation:**
 As our algorithm is aim for screening studies we decided to focus on **Recall** as a high recall means we are most confident when the test is negative. Hence, we've selected a threshold of `0.35` obtaining a recall of `0.8` penalising precision to `0.26`
