@@ -141,7 +141,6 @@ As our algorithm is aim for screening studies we decided to focus on **Recall** 
 | Training Dataset | Gender Distribution | Age Distribution |
 |----------|--------|-----|
 |![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_dataset.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_dataset_gender.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/training_age_distribution.png)|
-|----------|--------|-----|
 |Balanced with 50% pneumonia cases| The gender is slightly imbalanced, with more males than females|The age distribution with more cases between 10 and 80 years.
 
 
