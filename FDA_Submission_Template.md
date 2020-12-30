@@ -162,9 +162,9 @@ We've selected a threshold of `0.35` obtaining a recall of `0.8` penalising prec
 | 20% pneumonia studies | Slightly imbalanced, with more males than females studies | More cases between 10 and 80 years|
 
 ### 5. Ground Truth
-- The NIH Chest X-ray dataset uses NLP to obtain the labels which can lead to not having the real disease.
-- It is highly imbalanced containing more than 50% of non pneumonia cases as it is a more general dataset.
-- Many patients in this dataset have more than one disease comorbid with Pneumonia. This could impact the algorithm clinical performance.
+
+The NIH Chest X-ray Dataset is highly imbalanced in relation with patients with pneumonia. NLP-derived labels from the NIH are sub-optimal since they are more general than only the case of Pneumonia. 
+One patient can have more than one disease similar to Pneumonia and many of them with more prevalence than Pneumonia in the dataset. This could negatively impact the algorithm clinical performance.
 
 | NIH distribution | Diseases comorbid with Pneumonia |
 |------------------|------------------|
