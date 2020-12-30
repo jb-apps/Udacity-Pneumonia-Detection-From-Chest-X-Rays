@@ -185,5 +185,5 @@ Since identifying Pneumonia is difficult for radiologists, we will use silver st
 
 
 **Algorithm Performance Standard:**
-Since our algorithm is used for screening studies we will focus on *recall*. We want to achieve a high recall, at least higher than 0.8.
-The F1 score of our algorithm was 0.4, this score is slightly higher to the average of radiologists `0.387`  according to the [CheXNet](https://arxiv.org/pdf/1711.05225.pdf) paper.
+Since our algorithm is used for screening studies we will focus on *recall*. We want to achieve a high recall, at least higher than 0.7.
+The F1 score of our algorithm than 0.419, this score is slightly higher to the average of radiologists `0.387`  according to the [CheXNet](https://arxiv.org/pdf/1711.05225.pdf) paper.
