@@ -60,14 +60,13 @@ We've also added 3 fully-connected layers of 1024, 512 and 256 units using `relu
 We've also added a 20% dropout to each layer.
 
 Finally we've added a fully-connected layer with one unit using `sigmoid` as the activation function. The reason behind not returning the `logits` is because we are using `binary_crossentropy` as the loss function and according to the [documentation](https://keras.io/api/losses/probabilistic_losses/#binary_crossentropy-function) by default it doesn't expect logits.
+* **loss** = 'binary_crossentropy'
+* **optimizer** = 'adam'
+* **metrics** = ['binary_accuracy']
 
 |Training Loss & Accuracy on Dataset|Precision-Recall|AUC|
 |------|------|------|
 |![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download-2.png)|![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/download-1.png)|
-
-* **loss** = 'binary_crossentropy'
-* **optimizer** = 'adam'
-* **metrics** = ['binary_accuracy']
 
 
 ### 3. Algorithm Training
