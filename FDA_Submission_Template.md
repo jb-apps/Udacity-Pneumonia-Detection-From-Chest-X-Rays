@@ -128,7 +128,13 @@ Dense(1, activation = 'sigmoid')
 
 **Final Threshold and Explanation:**
 
-As our algorithm is aim for screening studies we decided to focus on **Recall** as a high recall means we are most confident when the test is negative. Hence, we've selected a threshold of `0.35` obtaining a recall of `0.8` penalising precision to `0.26`
+In clinical situations:
+- **Precision** is used for confirming a diagnosis and it doesn't take **False Negatives** into account.
+- **Recall** is used in screening studies and it takes **False Negatives** into account.
+
+As our algorithm is aim for screening studies we must focus on maximizing **recall** as we want to be more confident when the test is negative. A high recall will mean **False Negatives** will be close to zero.
+
+We've selected a threshold of `0.35` obtaining a recall of `0.8` penalising precision to `0.26`.
 
 
 ### 4. Databases
