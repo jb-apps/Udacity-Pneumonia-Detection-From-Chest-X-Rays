@@ -29,11 +29,22 @@ For assisting radiologists into detecting Pneumonia on chest X-Rays.
 |![Image](https://github.com/jb-apps/Udacity-Pneumonia-Detection-From-Chest-X-Rays/blob/main/assets/Algorithm.png)|
 
 **DICOM Checking Steps:**
+We check for 3 parameters:
+- Image type (Modality) is a Digital X-ray (DX)
+- Image body position is Chest.
+- Image Position is either Anteior-Posterior(AP) or Posterior-Anteior PA.
+
+If all these conditions are met, then we return:
+- Image pixel data.
+- Image mean.
+- Image standard deviation.
 
 **Preprocessing Steps:**
-
+- We first standarize the image using the mean and standard deviation.
+- We resize the image using the image size used for training.
+    
 **CNN Architecture:**
-VGG16 CNN was used for transfer learning. All but the last block were frezzed.
+VGG16 CNN was used for transfer learning. All but the last block were freezed.
 We got better results by fine tuning the last block which has 3 convolutional layers and a MaxPooling2D.
 We've also added 3 fully-connected layers of 1024, 512 and 256 units using `relu` as the activation function,
 We've also added a 20% dropout to each layer.
